@@ -21,7 +21,13 @@ class Item:
         self.all.append(self)
 
 
+    def __repr__(self):
+        """Возвращает  вывод для Item"""
+        return f"""Item('{self.name}', {self.price}, {self.quantity})"""
 
+    def __str__(self):
+        """Возвращает вывод для пользователей"""
+        return f"{self.name}"
 
 
     def calculate_total_price(self) -> float:

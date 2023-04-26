@@ -34,3 +34,13 @@ def test_name():
     assert product.name == 'Планшет'
     product.name = 'Ipad'
     assert product.name == 'Ipad'
+
+def test_str():
+    """Тестирование метода __str__"""
+    product = Item('Планшет', 10000, 20)
+    assert str(product) == 'Планшет'
+
+def test_repr():
+    """Тестирование метода __repr__"""
+    product = Item('Планшет', 10000, 20)
+    assert repr(product) == "Item('Планшет', 10000, 20)"
