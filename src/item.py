@@ -73,6 +73,14 @@ class Item:
         else:
             number = int(number_string)
         return number
+
+    def __add__(self, other):
+        """Реализует сложение по количеству на складе"""
+        if isinstance(other, Item):
+            return self.quantity + other.quantity
+        else:
+            raise Exception('невозможно складывать с данным классом')
+
     @property
     def name(self):
         """Возвращает название товара"""

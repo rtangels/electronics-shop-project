@@ -44,3 +44,8 @@ def test_repr():
     """Тестирование метода __repr__"""
     product = Item('Планшет', 10000, 20)
     assert repr(product) == "Item('Планшет', 10000, 20)"
+
+def test_add():
+    """Тестирование метода сложения add"""
+    product = Item('Планшет', 10000, 20)
+    assert product+product == 40
